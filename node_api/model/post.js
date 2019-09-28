@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const {ObjectId} = mongoose.Schema;
 
 const postSchema = new mongoose.Schema({
 	title: {
@@ -12,6 +13,18 @@ const postSchema = new mongoose.Schema({
 		required: "Body can't be empty!",
 		minlength: 4,
 		maxlength: 2500
+	},
+	post: {
+		data: Buffer, // type can be changed to buffer
+		contentType: String
+	},
+	postedBy: {
+		type: ObjectId,
+		ref: "User"
+	},
+	created: {
+		type: Date,
+		default: Date.now
 	}
 });
 
