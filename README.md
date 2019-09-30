@@ -5,4 +5,4 @@
 - npm install
 - npm run social_media
 
-### The API is tested using **Postman tool**.
+### The API is tested using Postman tool.
