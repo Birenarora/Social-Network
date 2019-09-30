@@ -1,6 +1,8 @@
-# Backend - Social_Network
+# Backend - Social Network
 
-## To run  project, follow the commands:
+## To run the project, follow the commands:
 - cd challengecc/nodeapi
 - npm install
 - npm run social_media
+
+### The API is tested using **Postman tool**.
