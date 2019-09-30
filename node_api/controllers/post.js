@@ -86,7 +86,7 @@ exports.postsByUser = (req, res) => {
 	};
 
 exports.isPoster = (req, res, next) => {
-	let poster = req.post && req.auth && req.post.postedBy._id === req.auth._id;
+	let poster = req.post && req.auth && req.post.postedBy._id == req.auth._id;
 
 	console.log("req.post:", req.post);
 	console.log("req.auth:", req.auth);
@@ -103,15 +103,15 @@ exports.isPoster = (req, res, next) => {
 
  exports.updatePost = (req, res, next) => {
  	let post = req.post;
- 	post = _extend(post, req,body);
+ 	post = _.extend(post, req.body);
  	post.updated = Date.now();
  	post.save(err => {
  		if(err) {
  		return res.status(400).json({
- 			error: err	
+ 			error: "You are not authorized!"	
  		});
  	}
- 		res.json(post);
+ 		res.json({ post });
  	});
  };
 

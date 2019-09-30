@@ -4,12 +4,10 @@
 	"/signin": "signin",
 	"/signout": "signout",
 	"/users": "get all users",
-	"/user/:userid": "get user", // GET
-	"/user/:userid": "update user", // PUT
-	"/user/:userid": "delete user", // DELETE
+	"/user/:userid": "get user <GET>",
+	"/user/:userid": "update / delete user <PUT> / <DELETE>",
 	"/posts": "get all posts",
 	"/post/new/:userid": "create new post",
 	"/posts/by/:userid": "get posts by user",
-	"/post/:postid": "update post", // PUT
-	"/post/:postid": "delete post" // DELETE
+	"/post/:postid": "update / delete post <PUT> / <DELETE>"
 }
